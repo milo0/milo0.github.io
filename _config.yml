@@ -1,0 +1,5 @@
+theme: jekyll-theme-minimal
+excerpt_separator: "<!--more-->"
+logo: assets/milo.png
+title: Milo's blog
+description: A simplicity-loving imperfectionist blogging about Data Engineering, Data Science, Cloud (Security), Programming and maybe some other stuff...

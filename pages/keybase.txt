@@ -1,0 +1,60 @@
+---
+permalink: /.well-known/keybase.txt
+---
+
+==================================================================
+https://keybase.io/milo0
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://milo0.github.io
+  * I am milo0 (https://keybase.io/milo0) on keybase.
+  * I have a public key ASAqn1wF5KMGkvNvjpY9IlULdDb0H4ucexTqCLm6Jlkvrwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01202a9f5c05e4a30692f36f8e963d22550b7436f41f8b9c7b14ea08b9ba26592faf0a",
+      "host": "keybase.io",
+      "kid": "01202a9f5c05e4a30692f36f8e963d22550b7436f41f8b9c7b14ea08b9ba26592faf0a",
+      "uid": "c52e5b1e13ceb7fa4582dbde55bcd119",
+      "username": "milo0"
+    },
+    "merkle_root": {
+      "ctime": 1567887950,
+      "hash": "47e03ffa57d33e436ba86df27846c6b02e4acfbd8f47d5967cf05649df733cec202f3d094ceb4d77296dc23dfddf3fd57438cff490767eb8503b294391c813b9",
+      "hash_meta": "3037599acd263cc477298c44203e973f74b08db51dd46eaf40c291bcbdfbe1a3",
+      "seqno": 6196538
+    },
+    "service": {
+      "entropy": "m0Y/qmp1ZLPfs0uec+f4pLx+",
+      "hostname": "milo0.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.4.0"
+  },
+  "ctime": 1567887965,
+  "expire_in": 504576000,
+  "prev": "c84316835557c112ecf5a8f01e4c2896ba7d1e5919fe4497a3962a640cf836d7",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgKp9cBeSjBpLzb46WPSJVC3Q29B+LnHsU6gi5uiZZL68Kp3BheWxvYWTESpcCFMQgyEMWg1VXwRLs9ajwHkwolrp9HlkZ/kSXo5YqZAz4NtfEIKDjN/Wd/SKxv+xgZ4H5QpGLXeGEcG3k2oq9+PCi/yYLAgHCo3NpZ8RAELJMAfVxll2O6JzaHyCP9cqT4+79u3nqHj7iMLxYoS5pf5ysdqN8G8DxT0tm8oTbLw/kG21MG/4vsbGN47LbCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHXyX3i2wZtNlcCVweSfKSAmvOicf20RSmeoOc811bteo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/milo0
+
+==================================================================
