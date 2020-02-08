@@ -29,7 +29,7 @@ The purpose of our application is to create an AWS CloudTrail, that is being mon
 
 This is neither an introduction to CDK nor to AWS or Python. This post is for readers who have at least gone through introductory material (e. g. Getting Started guides) for CDK and AWS. After you've gone through some initial tutorials you might be asking 'hm, nice, now I can create an S3 bucket or a VPC with the CDK. But how do I actually create something useful? Something that actually does something? How do I make components interact with each other?' If you're asking yourself these questions - this post is for you!
 
-Before we proceed, a quick word of caution: This application is neither neccessarily useful for real-world production use, nor is it waterproof in terms of security. For example, a user with sufficient permissions could simply delete our 'Security Lambda' or the S3 bucket of our CloudTrail log. So don't be a smartass about it. The main purpose of this is to get you acquainted with concepts that can support you in some way with your everyday chores. I do not take responsibility for any direct or indirect damages caused by the use of the concepts or the code presented here.
+Before we proceed, a quick word of caution: This application is neither neccessarily useful for real-world production use, nor is it waterproof in terms of security. For example, a user with sufficient permissions could simply delete our 'Security Lambda' or the S3 bucket of our CloudTrail log. So don't be a smartass about it ^^. The main purpose of this is to get you acquainted with concepts that can support you in some way with your everyday chores. I do not take responsibility for any direct or indirect damages caused by the use of the concepts or the code presented here.
 
 Now that we got all the legal crap out of the way, let's continue on to the interesting stuff...
 
@@ -111,7 +111,7 @@ After executing this line, poetry will do two things:
 1. Create a hidden directory called `.venv`, which yields the virtualenvironment for our project. This is the directory you have to set as your project SDK in your IDE.
 2. Add the specified dependencies with version constraints to the `pyproject.toml` file.
 
-Step 2 can also been done by adding the dependencies manually to `pyproject.toml` and executing `poetry install` after that, but using `poetry add` is way easier in this case. If you want to find out more about how to add dependencies and version constraints with poetry, you can have a look at the [documentation](https://python-poetry.org/docs/basic-usage/ "poetry basic usage documentation").
+Step 2 can also be done by adding the dependencies manually to `pyproject.toml` and executing `poetry install` after that, but using `poetry add` is way easier in this case. If you want to find out more about how to add dependencies and version constraints with poetry, you can have a look at the [documentation](https://python-poetry.org/docs/basic-usage/ "poetry basic usage documentation").
 
 ---
 **NOTE:**
@@ -123,7 +123,7 @@ You can check if everything is going well so far by exemplarily importing librar
 1. Activate the virtualenv created by poetry with `poetry shell` and use Python normally from there.
 2. Precede all commands that depend on resources from the virtualenv with `poetry run`.
 
-We will use the second option, since it seems to be more reliable. I have experienced multiple occasions where using `poetry shell` didn't yield the desired results. You can test your setup by executing the following line:
+We will choose the second option, since it seems to be more reliable. I have experienced multiple occasions where using `poetry shell` didn't yield the desired results. You can test your setup by executing the following line:
 
 ```bash
 poetry run python -c 'from aws_cdk import core, aws_cloudtrail'
@@ -233,7 +233,7 @@ Now we are **finally** able to deploy our stack, which currently only consists o
 poetry run cdk deploy
 ```
 
-CDK will list the changes it is about to apply to your infrastructure. As we are going to make security-relevant changes (we are creating an IAM user) CDK will ask if you are really sure about your decision. Please confirm and wait for a few seconds until CDK has done its job. After that you can log into your AWS account using your Admin credentials and have a look in IAM. There you should see our newly created user appearing as `cloudtrail-protection-myuser<HASH>`.
+CDK will list the changes it is about to apply to your infrastructure. As we are going to make security-relevant changes (we are creating an IAM user) CDK will ask if you are really sure about your decision. Please confirm and wait for a few seconds until CDK has done its job. After that you can log into your AWS account using your Admin credentials and have a look into IAM. There you should see our newly created user appearing as `cloudtrail-protection-myuser<HASH>`.
 
 # Create the CloudTrail
 
@@ -303,7 +303,7 @@ This will cause every message being published to the SNS Topic to be forwarded t
 topic.grant_publish(fn)
 ```
 
-This by itself won't work however, because Lambda doesn't know the ARN of the SNS Topic to target. If you look at our Lambda code in `./lambda/cloudtrail_reactor.py` you will notice that the Lambda receives the ARN via an environment variable with the line `sns_arn = os.environ['SNS_ARN']`.To make this to work we have to add the environment variable placeholder for the Lambda as follows:
+This by itself won't work however, because Lambda doesn't know the ARN of the SNS Topic to target. If you look at our Lambda code in `./lambda/cloudtrail_reactor.py` you will notice that the Lambda receives the ARN via an environment variable with the line `sns_arn = os.environ['SNS_ARN']`. To make this to work we have to add the environment variable placeholder for the Lambda as follows:
 
 ```python
 fn.add_environment('SNS_ARN', topic.topic_arn)
@@ -440,4 +440,4 @@ In this tutorial you learned a few basics about how to build a security-relevant
 
 * Original [blog post](https://aws.amazon.com/blogs/mt/monitor-changes-and-auto-enable-logging-in-aws-cloudtrail/ "Original blog post by AWS") by AWS
 * Blog post with a much more complex and closer-to-reality [example](https://aws.amazon.com/blogs/compute/orchestrating-a-security-incident-response-with-aws-step-functions/ "Orchestrating a security incident response with AWS Step Functions") of Serverless Security Automation (also available in Serverless Application Repository as 'Automated-IAM-policy-alerts-and-approvals')
-* [AWS CDK Python Workshop](https://cdkworkshop.com/ or https://cdkworkshop.com/30-python.html "AWS CDK Python Workshop")
+* [AWS CDK Python Workshop](https://cdkworkshop.com/30-python.html "AWS CDK Python Workshop")
