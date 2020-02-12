@@ -1,9 +1,24 @@
 ---
 layout: post
-title:  "TITLE GOES HERE"
-category: data engineering, cloud, programming, career, personal, linux
-author: Milo
+title: "TITLE GOES HERE"
+category: MY_CATEGORY
+author: MY_NAME
 ---
 
-- change title
-- set category/categories
+Intro text
+
+# Headline
+
+lorem ipsum and so on
+
+## Sub-Headline
+### Sub-Sub-Headline
+
+
+* Bullet points
+
+---
+**Infobox headline**
+Super important text
+
+---
